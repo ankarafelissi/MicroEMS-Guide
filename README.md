@@ -10,22 +10,6 @@
 
 GitHub 仓库的 Settings → Pages 选择 Deploy from a branch，分支为 `main`、目录为 `/ (root)`。更新静态文件并推送到 `main` 后，GitHub Pages 自动重新发布。
 
-## 本地预览
-
-在独立的 `MicroEMS-Guide` 仓库根目录运行：
-
-```powershell
-python -m http.server 8601 --bind 127.0.0.1
-```
-
-如果使用 EMS 项目中的 `guide/` 目录，在 EMS 根目录运行：
-
-```powershell
-.\.venv\Scripts\python.exe -m http.server 8601 --bind 127.0.0.1 --directory guide
-```
-
-打开 http://127.0.0.1:8601 。
-
 ## 两个网站的链接
 
 - 调度中心顶部「操作指南」打开指南，并通过 `?center=` 传递当前调度中心的地址，只传来源，不传方案 ID。
