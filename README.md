@@ -2,6 +2,8 @@
 
 与能源调度中心同风格的纯静态操作手册，无需 Node.js、构建步骤或后端服务。
 
+在线阅读：[EMS 操作指南](https://ankarafelissi.github.io/MicroEMS-Guide/)。
+
 ## 发布
 
 指南单独发布到公开仓库 `ankarafelissi/MicroEMS-Guide`。该仓库根目录只放本目录内的文件，不包含调度中心源码、模型、数据或许可证。
@@ -10,7 +12,13 @@ GitHub 仓库的 Settings → Pages 选择 Deploy from a branch，分支为 `mai
 
 ## 本地预览
 
-在本项目根目录运行：
+在独立的 `MicroEMS-Guide` 仓库根目录运行：
+
+```powershell
+python -m http.server 8601 --bind 127.0.0.1
+```
+
+如果使用 EMS 项目中的 `guide/` 目录，在 EMS 根目录运行：
 
 ```powershell
 .\.venv\Scripts\python.exe -m http.server 8601 --bind 127.0.0.1 --directory guide
