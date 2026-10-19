@@ -67,12 +67,12 @@
     <section class="doc-section" id="quickstart" aria-labelledby="quickstart-title">
       <div class="section-heading"><div><p class="eyebrow">01 / QUICK START</p><h2 id="quickstart-title">第一轮调度，四步完成</h2></div><span class="section-note">首次使用可保留默认参数</span></div>
       <ol class="steps">
-        <li><span class="step-number">01</span><div><h3>设置运行要求</h3><p>在左侧「运行配置」中设置备用 SOC、购电目标与优化目标。展开「电池与设备」可调整容量、功率及 SOC。</p><a class="inline-link" href="#configuration">查看参数说明 →</a></div><span class="step-location">左侧配置区</span></li>
-        <li><span class="step-number">02</span><div><h3>生成日前计划</h3><p>点击 <span class="ui-label">生成日前计划</span>。计算完成后，主界面显示 96 点计划，方案进入「日前计划已就绪」状态。</p></div><span class="step-location">生成新方案</span></li>
-        <li><span class="step-number">03</span><div><h3>执行并观察</h3><p>点击 <span class="ui-label">执行下一个15分钟</span> 推进一步；或用 <span class="ui-label">自动运行 / 继续</span> 连续推进。需要停下时点击 <span class="ui-label">暂停</span>。</p></div><span class="step-location">顶部调度控制</span></li>
-        <li><span class="step-number">04</span><div><h3>检查结果，导出记录</h3><p>查看「调度曲线」「预测评测」「运行效果」。在「记录与导出」中回看调整方案、下载执行记录。</p><a class="inline-link" href="#export">查看导出内容 →</a></div><span class="step-location">结果标签页</span></li>
+        <li><span class="step-number">01</span><div><h3>设置运行要求</h3><p>在左侧「Configuration」中设置备用 SOC、购电目标与优化目标。展开「Battery & equipment」可调整容量、功率及 SOC。</p><a class="inline-link" href="#configuration">查看参数说明 →</a></div><span class="step-location">左侧配置区</span></li>
+        <li><span class="step-number">02</span><div><h3>生成日前计划</h3><p>点击 <span class="ui-label">Generate day-ahead plan</span>。计算完成后，主界面显示 96 点计划，方案进入「Day-ahead plan ready」状态。</p></div><span class="step-location">生成新方案</span></li>
+        <li><span class="step-number">03</span><div><h3>执行并观察</h3><p>点击 <span class="ui-label">Execute next 15 minutes</span> 推进一步；或用 <span class="ui-label">Auto run / resume</span> 连续推进。需要停下时点击 <span class="ui-label">Pause</span>。</p></div><span class="step-location">顶部调度控制</span></li>
+        <li><span class="step-number">04</span><div><h3>检查结果，导出记录</h3><p>查看「Dispatch curves」「Forecast evaluation」「Operating results」。在「Records & export」中回看调整方案、下载执行记录。</p><a class="inline-link" href="#export">查看导出内容 →</a></div><span class="step-location">结果标签页</span></li>
       </ol>
-      <div class="callout"><span class="callout-mark">i</span><p>修改参数后，需要再次点击「生成日前计划」。已有方案保留原参数及执行记录。</p></div>
+      <div class="callout"><span class="callout-mark">i</span><p>修改参数后，需要再次点击「Generate day-ahead plan」。已有方案保留原参数及执行记录。</p></div>
     </section>
 
     <section class="doc-section" id="configuration" aria-labelledby="configuration-title">
@@ -92,8 +92,8 @@
 
     <section class="doc-section" id="execution" aria-labelledby="execution-title">
       <div class="section-heading"><div><p class="eyebrow">03 / EXECUTION</p><h2 id="execution-title">掌握执行节奏</h2></div></div>
-      <div class="control-guide"><article><span class="keycap">STEP</span><h3>单步执行</h3><span class="ui-label">执行下一个15分钟</span><p>读取当前时段数据，调整后续计划，只执行当前一步。适合逐点观察。</p></article><article><span class="keycap">AUTO</span><h3>连续推进</h3><span class="ui-label">自动运行 / 继续</span><p>按选定间隔自动执行。可选 0.2、1 或 3 秒 / 步；每步始终代表 15 分钟。</p></article><article><span class="keycap">PAUSE</span><h3>暂停检查</h3><span class="ui-label">暂停</span><p>当前正在计算的一步结束后暂停。已完成的执行记录保留，可继续运行。</p></article></div>
-      <div class="callout callout-amber"><span class="callout-mark">!</span><p>关闭网页不会暂停自动运行。离开前如需停止推进，请先点击「暂停」。推进间隔是仿真播放速度，不是现实中的控制周期。</p></div>
+      <div class="control-guide"><article><span class="keycap">STEP</span><h3>单步执行</h3><span class="ui-label">Execute next 15 minutes</span><p>读取当前时段数据，调整后续计划，只执行当前一步。适合逐点观察。</p></article><article><span class="keycap">AUTO</span><h3>连续推进</h3><span class="ui-label">Auto run / resume</span><p>按选定间隔自动执行。可选 0.2、1 或 3 秒 / 步；每步始终代表 15 分钟。</p></article><article><span class="keycap">PAUSE</span><h3>暂停检查</h3><span class="ui-label">Pause</span><p>当前正在计算的一步结束后暂停。已完成的执行记录保留，可继续运行。</p></article></div>
+      <div class="callout callout-amber"><span class="callout-mark">!</span><p>关闭网页不会暂停自动运行。离开前如需停止推进，请先点击「Pause」。推进间隔是仿真播放速度，不是现实中的控制周期。</p></div>
       <h3 class="subsection-title">根据状态判断下一步</h3>
       <div class="state-list"><div><span class="state-chip ready">日前计划已就绪</span><p>可以单步执行或开始自动运行。</p></div><div><span class="state-chip running">自动运行中</span><p>系统连续推进；需要检查时点击暂停。</p></div><div><span class="state-chip paused">已暂停</span><p>可以继续自动运行，也可以改用单步执行。</p></div><div><span class="state-chip completed">全天执行完成</span><p>96 个时段已结束，可以查看和导出结果。</p></div><div><span class="state-chip blocked">要求冲突 / 执行已停止</span><p>查看提示的冲突原因，调整参数后生成新方案。</p></div></div>
     </section>
@@ -109,8 +109,8 @@
 
     <section class="doc-section" id="export" aria-labelledby="export-title">
       <div class="section-heading"><div><p class="eyebrow">05 / RECORDS & EXPORT</p><h2 id="export-title">让结果可回看、可复核</h2></div></div>
-      <div class="export-list"><article><span class="file-badge">CSV</span><div><h3>实际执行记录</h3><p>在「记录与导出」点击「下载实际执行 CSV」，保存各已执行时段的功率、SOC 与费用。</p></div><span class="export-location">记录与导出</span></article><article><span class="file-badge">JSON</span><div><h3>完整方案</h3><p>点击「下载完整方案 JSON」，保留参数、预测、调整历史和执行状态，便于整体复核。</p></div><span class="export-location">记录与导出</span></article><article><span class="file-badge">CSV</span><div><h3>逐点预测评测</h3><p>在「预测评测」点击「下载预测评测 CSV」。有实际执行数据后，才会出现此下载入口。</p></div><span class="export-location">预测评测</span></article></div>
-      <div class="callout"><span class="callout-mark">i</span><p>左侧「已保存方案」可选择历史方案，再点击「打开所选方案」。结果页的「查看历史调整方案」可回看每一次重算。</p></div>
+      <div class="export-list"><article><span class="file-badge">CSV</span><div><h3>实际执行记录</h3><p>在「Records & export」点击「Download actual execution CSV」，保存各已执行时段的功率、SOC 与费用。</p></div><span class="export-location">记录与导出</span></article><article><span class="file-badge">JSON</span><div><h3>完整方案</h3><p>点击「Download complete plan JSON」，保留参数、预测、调整历史和执行状态，便于整体复核。</p></div><span class="export-location">记录与导出</span></article><article><span class="file-badge">CSV</span><div><h3>逐点预测评测</h3><p>在「Forecast evaluation」点击「Download forecast evaluation CSV」。有实际执行数据后，才会出现此下载入口。</p></div><span class="export-location">预测评测</span></article></div>
+      <div class="callout"><span class="callout-mark">i</span><p>左侧「Saved plans」可选择历史方案，再点击「Open selected plan」。结果页的「Historical revisions」可回看每一次重算。</p></div>
     </section>
 
   </main>
