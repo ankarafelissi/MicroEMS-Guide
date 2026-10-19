@@ -1,20 +1,22 @@
-# EMS 操作指南
+# EMS Operations Guide
 
-与能源调度中心同风格的纯静态操作手册，无需 Node.js、构建步骤或后端服务。
+One bilingual guide, maintained in this repository and published with GitHub Pages.
 
-在线阅读：[EMS 操作指南](https://ankarafelissi.github.io/MicroEMS-Guide/)。
+- [English — default](https://ankarafelissi.github.io/MicroEMS-Guide/)
+- [中文](https://ankarafelissi.github.io/MicroEMS-Guide/zh.html)
 
-英文版：[网站](https://ankarafelissi.github.io/MicroEMS-Guide-EN/) · [独立仓库](https://github.com/ankarafelissi/MicroEMS-Guide-EN)。两个网站的顶部可以切换语言。
+Use the language switch at the top of either page. Switching preserves the current chapter and the dashboard return address.
 
-## 发布
+## Files and publishing
 
-指南单独发布到公开仓库 `ankarafelissi/MicroEMS-Guide`。该仓库根目录只放本目录内的文件，不包含调度中心源码、模型、数据或许可证。
+`index.html` contains the English guide; `zh.html` contains the Chinese guide. Both share `style.css`, `script.js`, `config.js`, and `favicon.svg`. No build step or backend is required.
 
-GitHub 仓库的 Settings → Pages 选择 Deploy from a branch，分支为 `main`、目录为 `/ (root)`。更新静态文件并推送到 `main` 后，GitHub Pages 自动重新发布。
+GitHub Settings → Pages uses **Deploy from a branch**, branch **main**, folder **/ (root)**. Push changes to `main` to publish. This public repository contains only the guide, with no dispatch application source, models, data, or licenses.
 
-## 两个网站的链接
+The dashboard's **User guide** link opens the English homepage and passes its origin through `?center=`. The guide's **Dashboard** link uses that address; direct visits fall back to `dashboardUrl` in `config.js`. The link does not execute dispatch operations.
 
-- 调度中心顶部「User guide」默认打开英文指南，并通过 `?center=` 传递当前调度中心的地址，只传来源，不传方案 ID。
-- 指南里的「进入调度中心」优先使用该地址，适应本地访问和临时公网地址变化。
-- 直接打开指南时，使用 `config.js` 中的 `dashboardUrl`。公网入口改变后，可更新此默认值并重新发布。
-- 返回入口是普通链接，不会自动连接或操作调度 API。
+## 中文说明
+
+中英文在同一个仓库维护。默认首页为英文，顶部「中文 / EN」切换语言，并保留当前章节和返回调度中心的地址。
+
+修改英文内容使用 `index.html`，修改中文内容使用 `zh.html`；样式和脚本由两个版本共用。提交到 `main` 后由 GitHub Pages 自动发布。
