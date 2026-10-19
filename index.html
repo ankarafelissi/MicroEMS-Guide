@@ -6,6 +6,7 @@
   <meta name="color-scheme" content="dark">
   <meta name="description" content="能源调度中心操作指南：配置运行要求、生成日前计划、执行日内调度、阅读曲线与导出记录。">
   <title>EMS · 操作指南</title>
+  <link rel="alternate" hreflang="en" href="https://ankarafelissi.github.io/MicroEMS-Guide-EN/">
   <link rel="icon" href="./favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="./style.css">
   <script src="./config.js" defer></script>
@@ -20,6 +21,7 @@
     </a>
     <div class="topbar-actions">
       <span class="edition">能源调度中心 · 使用手册</span>
+      <a class="language-link" href="https://ankarafelissi.github.io/MicroEMS-Guide-EN/" hreflang="en" lang="en" aria-label="切换为英文版">EN</a>
       <a class="button button-outline dashboard-link" href="https://ltd-prescription-bridal-positioning.trycloudflare.com/" target="_blank" rel="noopener noreferrer">进入调度中心 <span aria-hidden="true">↗</span></a>
       <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="sidebar" aria-label="打开章节目录"><span></span><span></span></button>
     </div>
@@ -34,7 +36,6 @@
       <a href="#execution"><span>03</span>执行与控制</a>
       <a href="#charts"><span>04</span>图表与指标</a>
       <a href="#export"><span>05</span>记录与导出</a>
-      <a href="#faq"><span>06</span>常见问题</a>
     </nav>
     <div class="sidebar-bottom"><span class="small-label">调度周期</span><p>24 h <span>/</span> 96 时段</p><div class="mini-track"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div><span class="small-label">每个时段代表 15 分钟</span></div>
   </aside>
@@ -60,7 +61,7 @@
           <div class="flow-footer"><span class="status-dot"></span>循环推进，直至 96 个时段完成</div>
         </div>
       </div>
-      <div class="guide-index"><a href="#quickstart"><span>01 / START</span>生成第一份计划 <b aria-hidden="true">↗</b></a><a href="#charts"><span>04 / MONITOR</span>读懂运行结果 <b aria-hidden="true">↗</b></a><a href="#faq"><span>06 / SUPPORT</span>排查常见问题 <b aria-hidden="true">↗</b></a></div>
+      <div class="guide-index"><a href="#quickstart"><span>01 / START</span>生成第一份计划 <b aria-hidden="true">↗</b></a><a href="#charts"><span>04 / MONITOR</span>读懂运行结果 <b aria-hidden="true">↗</b></a><a href="#export"><span>05 / EXPORT</span>保存运行记录 <b aria-hidden="true">↗</b></a></div>
     </section>
 
     <section class="doc-section" id="quickstart" aria-labelledby="quickstart-title">
@@ -112,12 +113,6 @@
       <div class="callout"><span class="callout-mark">i</span><p>左侧「已保存方案」可选择历史方案，再点击「打开所选方案」。结果页的「查看历史调整方案」可回看每一次重算。</p></div>
     </section>
 
-    <section class="doc-section" id="faq" aria-labelledby="faq-title">
-      <div class="section-heading"><div><p class="eyebrow">06 / TROUBLESHOOTING</p><h2 id="faq-title">遇到问题，先看这里</h2></div></div>
-      <div class="faq-list"><details><summary>为什么提示「运行要求冲突」？<span class="plus" aria-hidden="true">+</span></summary><p>先按错误提示检查：购电硬上限是否过低、备用 SOC 是否过高，以及初始 / 日末 SOC 是否处在允许范围。要求无法同时满足时，请调整参数后生成新方案；已有方案不会被自动放宽约束。</p></details><details><summary>为什么 MAE 和 RMSE 显示「—」？<span class="plus" aria-hidden="true">+</span></summary><p>尚无实际执行数据时无法计算误差。执行一个时段后，系统开始累计预测评测；只查看计划不会产生实际样本。</p></details><details><summary>修改了左侧参数，当前计划为什么没变化？<span class="plus" aria-hidden="true">+</span></summary><p>表单参数仅在点击「生成日前计划」时提交，并创建新方案。当前打开的历史方案继续使用其原来的参数。</p></details><details><summary>刷新页面会重复执行吗？关闭网页会停止吗？<span class="plus" aria-hidden="true">+</span></summary><p>刷新只读取已保存的状态，不会重复推进。自动运行由后端继续执行，关闭网页不会暂停；需要停止时，请先点击「暂停」。</p></details><details><summary>为什么执行按钮是灰色的？<span class="plus" aria-hidden="true">+</span></summary><p>自动运行中，单步与开始按钮不可用；完成全天调度或遇到冲突后，也不能继续推进。暂停按钮仅在自动运行中可用。若要开始新一轮，请生成新的日前计划。</p></details><details><summary>为什么无法打开调度中心？<span class="plus" aria-hidden="true">+</span></summary><p>先确认调度中心服务在线。当前公网入口依赖运行服务的电脑和网络；如果临时公网地址已变化，请从最新的调度中心页面点击「操作指南」，指南会使用本次访问的地址提供返回入口。</p></details></div>
-    </section>
-    <section class="closing-panel"><div><span class="eyebrow">READY FOR YOUR NEXT DISPATCH</span><h2>回到工作台，开始下一步。</h2></div><a class="button button-primary dashboard-link" href="https://ltd-prescription-bridal-positioning.trycloudflare.com/" target="_blank" rel="noopener noreferrer">进入调度中心 <span aria-hidden="true">↗</span></a></section>
-    <footer><span>EMS <span class="footer-divider">/</span> 能源调度中心操作指南</span><a href="#overview">返回顶部 ↑</a></footer>
   </main>
 </body>
 </html>

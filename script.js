@@ -4,18 +4,21 @@ const menuToggle = document.querySelector(".menu-toggle");
 const sidebar = document.querySelector(".sidebar");
 const navLinks = [...document.querySelectorAll(".chapter-nav a")];
 const sections = [...document.querySelectorAll(".doc-section")];
+const english = document.documentElement.lang.startsWith("en");
+const openMenuLabel = english ? "Open chapters" : "打开章节目录";
+const closeMenuLabel = english ? "Close chapters" : "关闭章节目录";
 
 function closeMenu() {
   sidebar.classList.remove("is-open");
   menuToggle.setAttribute("aria-expanded", "false");
-  menuToggle.setAttribute("aria-label", "打开章节目录");
+  menuToggle.setAttribute("aria-label", openMenuLabel);
 }
 
 menuToggle.addEventListener("click", () => {
   const open = menuToggle.getAttribute("aria-expanded") !== "true";
   sidebar.classList.toggle("is-open", open);
   menuToggle.setAttribute("aria-expanded", String(open));
-  menuToggle.setAttribute("aria-label", open ? "关闭章节目录" : "打开章节目录");
+  menuToggle.setAttribute("aria-label", open ? closeMenuLabel : openMenuLabel);
 });
 
 navLinks.forEach(link => link.addEventListener("click", closeMenu));
@@ -64,4 +67,15 @@ const center = new URLSearchParams(window.location.search).get("center");
 const destination = dashboardOrigin(center) || dashboardOrigin(window.EMS_GUIDE_CONFIG?.dashboardUrl);
 if (destination) {
   document.querySelectorAll(".dashboard-link").forEach(link => { link.href = destination; });
+}
+
+const languageLink = document.querySelector(".language-link");
+if (languageLink) {
+  const languageUrl = new URL(languageLink.href);
+  if (destination) languageUrl.searchParams.set("center", destination);
+  languageLink.href = languageUrl.href;
+  languageLink.addEventListener("click", () => {
+    languageUrl.hash = window.location.hash;
+    languageLink.href = languageUrl.href;
+  });
 }

@@ -4,6 +4,8 @@
 
 在线阅读：[EMS 操作指南](https://ankarafelissi.github.io/MicroEMS-Guide/)。
 
+英文版：[网站](https://ankarafelissi.github.io/MicroEMS-Guide-EN/) · [独立仓库](https://github.com/ankarafelissi/MicroEMS-Guide-EN)。两个网站的顶部可以切换语言。
+
 ## 发布
 
 指南单独发布到公开仓库 `ankarafelissi/MicroEMS-Guide`。该仓库根目录只放本目录内的文件，不包含调度中心源码、模型、数据或许可证。
